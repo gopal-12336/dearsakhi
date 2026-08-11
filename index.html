@@ -1,1 +1,1647 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>श्रीsakhi ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+
+body{
+
+    font-family:
+    'Noto Sans Devanagari',
+    sans-serif;
+
+    background:#08080d;
+
+    color:white;
+
+    overflow:hidden;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle at 50% 35%,
+        rgba(255,120,170,.16),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 10% 90%,
+        rgba(110,90,255,.13),
+        transparent 35%
+    ),
+
+    #08080d;
+
+    z-index:-5;
+}
+
+
+.light{
+
+    position:fixed;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,130,180,.10),
+        transparent 70%
+    );
+
+    filter:blur(25px);
+
+    animation:moveLight 12s infinite alternate;
+
+    z-index:-4;
+}
+
+
+.light.one{
+
+    top:-180px;
+    left:-120px;
+
+}
+
+
+.light.two{
+
+    bottom:-200px;
+    right:-120px;
+
+    animation-delay:3s;
+
+}
+
+
+@keyframes moveLight{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    100%{
+        transform:translate(140px,100px);
+    }
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.container{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+}
+
+
+.card{
+
+    width:100%;
+    max-width:720px;
+
+    min-height:500px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    padding:40px 25px;
+
+}
+
+
+/* =========================================
+   SCREENS
+========================================= */
+
+.screen{
+
+    width:100%;
+
+    display:none;
+
+    animation:screenIn 1s ease;
+
+}
+
+
+.screen.active{
+
+    display:block;
+
+}
+
+
+@keyframes screenIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   OPENING
+========================================= */
+
+.opening{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.logo{
+
+    font-family:
+
+    'Playfair Display',
+    'Noto Sans Devanagari',
+    serif;
+
+    font-size:
+    clamp(55px,13vw,110px);
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    background:
+
+    linear-gradient(
+        120deg,
+        #ffffff,
+        #ffd3e4,
+        #ffffff
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    opacity:0;
+
+    animation:
+
+    logoAppear 2s ease forwards,
+
+    logoGlow 3s 2s infinite alternate;
+
+}
+
+
+@keyframes logoAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        scale(.70);
+
+        filter:blur(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+@keyframes logoGlow{
+
+    from{
+
+        filter:
+        drop-shadow(
+            0 0 5px
+            rgba(255,150,190,.2)
+        );
+
+    }
+
+    to{
+
+        filter:
+        drop-shadow(
+            0 0 28px
+            rgba(255,150,190,.65)
+        );
+
+    }
+
+}
+
+
+.subtitle{
+
+    margin-top:20px;
+
+    color:#bdbdc7;
+
+    letter-spacing:4px;
+
+    font-size:11px;
+
+    opacity:0;
+
+    animation:
+    fadeUp 1s 1.3s forwards;
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn{
+
+    margin-top:40px;
+
+    padding:14px 35px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.25);
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    color:white;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+
+    transition:.6s;
+
+}
+
+
+.btn:hover::before{
+
+    left:100%;
+
+}
+
+
+.btn:hover{
+
+    transform:
+    translateY(-3px);
+
+    border-color:
+    rgba(255,180,210,.7);
+
+    box-shadow:
+
+    0 10px 35px
+    rgba(255,100,160,.2);
+
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.small-title{
+
+    color:#ff9fc2;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+
+.heading{
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    font-size:
+    clamp(30px,6vw,52px);
+
+    font-weight:600;
+
+    line-height:1.3;
+
+    margin-bottom:25px;
+
+}
+
+
+.message{
+
+    max-width:620px;
+
+    margin:auto;
+
+    color:#d5d5dd;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+
+.highlight{
+
+    color:#ffb2ce;
+
+}
+
+
+.bold{
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+
+/* =========================================
+   TYPEWRITER
+========================================= */
+
+.typewriter{
+
+    min-height:100px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    line-height:2;
+
+}
+
+
+.cursor{
+
+    display:inline-block;
+
+    width:2px;
+
+    height:25px;
+
+    background:#ff9fc2;
+
+    margin-left:5px;
+
+    animation:blink .8s infinite;
+
+}
+
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
+
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final-title{
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    font-size:
+    clamp(42px,9vw,75px);
+
+    background:
+
+    linear-gradient(
+        120deg,
+        #ffffff,
+        #ffb4d1,
+        #ffffff
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:20px;
+
+}
+
+
+.final-message{
+
+    color:#ddd;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+
+/* =========================================
+   PARTICLES
+========================================= */
+
+.particle{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    font-size:14px;
+
+    opacity:0;
+
+    animation:
+    particleMove 5s linear forwards;
+
+}
+
+
+@keyframes particleMove{
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(.5);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-100vh)
+        scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =========================================
+   TRANSITION
+========================================= */
+
+.transition{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#08080d;
+
+    z-index:100;
+
+    transform:
+    translateY(100%);
+
+    transition:
+
+    transform 1s
+    cubic-bezier(.77,0,.18,1);
+
+}
+
+
+.transition.active{
+
+    transform:
+    translateY(0);
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+    .card{
+
+        min-height:450px;
+
+    }
+
+
+    .message{
+
+        font-size:16px;
+
+        line-height:1.85;
+
+    }
+
+
+    .btn{
+
+        margin-top:32px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="background"></div>
+
+<div class="light one"></div>
+
+<div class="light two"></div>
+
+<div
+class="transition"
+id="transition">
+</div>
+
+
+<div class="container">
+
+<div class="card">
+
+
+<!-- =====================================
+     SCREEN 1
+===================================== -->
+
+<div
+class="screen active opening"
+id="screen1">
+
+
+    <div class="logo">
+
+        श्रीsakhi
+
+    </div>
+
+
+    <div class="subtitle">
+
+        SOMEONE PRICELESS
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="start()">
+
+        NEXT&nbsp;&nbsp; ✦
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =====================================
+     SCREEN 2
+===================================== -->
+
+<div
+class="screen"
+id="screen2">
+
+
+    <div class="small-title">
+
+        SUNO SAKHI...
+
+    </div>
+
+
+    <div class="heading">
+
+        Meri priye<br>
+        श्रीsakhi ❤️
+
+    </div>
+
+
+    <div class="message">
+
+        <div class="typewriter">
+
+            <span id="text1"></span>
+
+            <span class="cursor"></span>
+
+        </div>
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="next()">
+
+        AAGE BADHO&nbsp;&nbsp; →
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =====================================
+     SCREEN 3
+===================================== -->
+
+<div
+class="screen"
+id="screen3">
+
+
+    <div class="small-title">
+
+        EK BAAT
+
+    </div>
+
+
+    <div class="heading">
+
+        Banku Bhaiya<br>
+        kuch kehna chahta hai...
+
+    </div>
+
+
+    <div class="message">
+
+        Sach bolun?
+
+        <br><br>
+
+        Main duniya ke saamne shayad
+        har baat nahi keh pata,
+
+        <br><br>
+
+        lekin tumse...
+
+        <br><br>
+
+        <span class="highlight">
+
+        bina soche kuch bhi keh deta hoon.
+
+        </span>
+
+        <br><br>
+
+        Kyunki tumhare saamne
+        mujhe kuch pretend karne ki
+        zarurat hi nahi padti.
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="next()">
+
+        NEXT&nbsp;&nbsp; ✦
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =====================================
+     SCREEN 4
+===================================== -->
+
+<div
+class="screen"
+id="screen4">
+
+
+    <div class="small-title">
+
+        MERI BANDARIYA 🐒
+
+    </div>
+
+
+    <div class="heading">
+
+        Tu thodi pagal hai...
+
+    </div>
+
+
+    <div class="message">
+
+        Kabhi Pglu,
+
+        <br>
+
+        kabhi Bandariya,
+
+        <br>
+
+        kabhi itni annoying
+        ki mann kare tujhe
+        block kar doon. 😂
+
+        <br><br>
+
+        <span class="highlight">
+
+        Lekin sach ye hai...
+
+        </span>
+
+        <br><br>
+
+        Agar tu na ho,
+
+        <br>
+
+        to shayad ye sab
+        itna interesting bhi na ho.
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="next()">
+
+        EK AUR BAAT&nbsp;&nbsp; →
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =====================================
+     SCREEN 5
+===================================== -->
+
+<div
+class="screen"
+id="screen5">
+
+
+    <div class="small-title">
+
+        ACTUALLY...
+
+    </div>
+
+
+    <div class="heading">
+
+        Tu sirf friend nahi hai.
+
+    </div>
+
+
+    <div class="message">
+
+        Tu woh person hai
+        jiske saamne main
+        apna real version
+        reh sakta hoon.
+
+        <br><br>
+
+        Jiske saath
+        stupid baatein bhi
+        important lagti hain.
+
+        <br><br>
+
+        Aur kabhi-kabhi...
+
+        <br><br>
+
+        <span class="highlight">
+
+        bas baat kar lena hi
+        sukoon de deta hai.
+
+        </span>
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="next()">
+
+        NEXT&nbsp;&nbsp; ❤️
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =====================================
+     SCREEN 6
+===================================== -->
+
+<div
+class="screen"
+id="screen6">
+
+
+    <div class="small-title">
+
+        MERI श्रीsakhi ❤️
+
+    </div>
+
+
+    <div class="heading">
+
+        Ek cheez yaad rakhna...
+
+    </div>
+
+
+    <div class="message">
+
+        Duniya mein bahut log milenge,
+
+        <br><br>
+
+        kuch aayenge,
+        kuch chale jayenge,
+
+        <br><br>
+
+        lekin meri life mein
+        teri jagah...
+
+        <br><br>
+
+        <span class="highlight">
+
+        priceless hai.
+
+        </span>
+
+        <br><br>
+
+        Iski koi comparison nahi hai.
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="next()">
+
+        LAST MESSAGE&nbsp;&nbsp; ✦
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =====================================
+     SCREEN 7
+===================================== -->
+
+<div
+class="screen"
+id="screen7">
+
+
+    <div class="small-title">
+
+        GOPIBEN KI SAKHI ❤️
+
+    </div>
+
+
+    <div class="heading">
+
+        Meri priye श्रीsakhi...
+
+    </div>
+
+
+    <div class="message">
+
+        Agar kabhi life difficult lage,
+
+        <br>
+
+        agar kabhi lage ki sab kuch
+        ulta ho raha hai...
+
+        <br><br>
+
+        to bas ek baat yaad rakhna:
+
+        <br><br>
+
+        <span class="highlight">
+
+        Tum bahut important ho.
+
+        </span>
+
+        <br><br>
+
+        Aur haan...
+
+        <br><br>
+
+        apni woh cute si smile
+        kabhi mat khona. ❤️
+
+        <br><br>
+
+        — Tumhara Gopiben
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="finalScreen()">
+
+        FINAL SURPRISE&nbsp;&nbsp; 🎁
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =====================================
+     FINAL SCREEN
+===================================== -->
+
+<div
+class="screen"
+id="screen8">
+
+
+    <div class="small-title">
+
+        FOR MY श्रीsakhi
+
+    </div>
+
+
+    <div class="final-title">
+
+        Thank You ❤️
+
+    </div>
+
+
+    <div class="final-message">
+
+        <p>
+
+            Meri life mein hone ke liye.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Meri random baatein
+            sunne ke liye.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Mujhe bina judge kiye
+            samajhne ke liye.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Mere saath har tarah ki
+            bakwaas share karne ke liye.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Aur sabse important...
+
+        </p>
+
+
+        <br>
+
+
+        <p class="highlight">
+
+            Meri Sakhi hone ke liye. ❤️
+
+        </p>
+
+
+        <br><br>
+
+
+        <p>
+
+            Tum mere liye sirf ek friend nahi ho.
+
+            <br>
+
+            Tum meri life ka woh hissa ho
+
+            <br>
+
+            jiske bina kuch cheezein
+            adhuri si lagti hain.
+
+        </p>
+
+
+        <br>
+
+
+        <p class="highlight">
+
+            You are truly priceless.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            — Gopiben ❤️
+
+        </p>
+
+    </div>
+
+
+    <button
+    class="btn"
+    onclick="celebrate()">
+
+        ✦ CELEBRATE ✦
+
+    </button>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+let current = 1;
+
+
+
+/* =========================================
+   START WEBSITE
+========================================= */
+
+function start(){
+
+    transition();
+
+
+    setTimeout(()=>{
+
+        showScreen(2);
+
+
+        typeText(
+
+            "Meri priye श्रीsakhi, shayad tum soch rahi hogi ki ye kya hai... par tumhare Gopiben ne tumhare liye ye chhota sa surprise banaya hai. ❤️"
+
+        );
+
+
+        createParticles();
+
+
+    },700);
+
+}
+
+
+
+/* =========================================
+   NEXT SCREEN
+========================================= */
+
+function next(){
+
+    transition();
+
+
+    setTimeout(()=>{
+
+        current++;
+
+
+        showScreen(current);
+
+
+        createParticles();
+
+
+    },700);
+
+}
+
+
+
+/* =========================================
+   SHOW SCREEN
+========================================= */
+
+function showScreen(number){
+
+    document
+    .querySelectorAll(".screen")
+    .forEach(screen=>{
+
+        screen.classList.remove("active");
+
+    });
+
+
+    document
+    .getElementById("screen"+number)
+    .classList.add("active");
+
+}
+
+
+
+/* =========================================
+   TRANSITION
+========================================= */
+
+function transition(){
+
+    const t =
+    document.getElementById("transition");
+
+
+    t.classList.add("active");
+
+
+    setTimeout(()=>{
+
+        t.classList.remove("active");
+
+    },900);
+
+}
+
+
+
+/* =========================================
+   TYPEWRITER
+========================================= */
+
+function typeText(text){
+
+    const element =
+    document.getElementById("text1");
+
+
+    element.innerHTML="";
+
+
+    let i=0;
+
+
+    function write(){
+
+        if(i < text.length){
+
+            element.innerHTML +=
+            text.charAt(i);
+
+
+            i++;
+
+
+            setTimeout(
+                write,
+                38
+            );
+
+        }
+
+    }
+
+
+    write();
+
+}
+
+
+
+/* =========================================
+   FLOATING PARTICLES
+========================================= */
+
+function createParticles(){
+
+    for(
+        let i=0;
+        i<12;
+        i++
+    ){
+
+        const p =
+        document.createElement("div");
+
+
+        p.className =
+        "particle";
+
+
+        p.innerHTML =
+
+        [
+            "✦",
+            "♡",
+            "✧",
+            "·",
+            "♥",
+            "✨"
+        ]
+        [
+            Math.floor(
+                Math.random()*6
+            )
+        ];
+
+
+        p.style.left =
+        Math.random()*100+"vw";
+
+
+        p.style.bottom =
+        "-20px";
+
+
+        p.style.animationDuration =
+
+        (
+            4+
+            Math.random()*4
+        )+"s";
+
+
+        document.body
+        .appendChild(p);
+
+
+        setTimeout(()=>{
+
+            p.remove();
+
+        },8000);
+
+    }
+
+}
+
+
+
+/* =========================================
+   FINAL SCREEN
+========================================= */
+
+function finalScreen(){
+
+    transition();
+
+
+    setTimeout(()=>{
+
+        showScreen(8);
+
+
+        current=8;
+
+
+        createParticles();
+
+
+    },700);
+
+}
+
+
+
+/* =========================================
+   CELEBRATION
+========================================= */
+
+function celebrate(){
+
+    for(
+        let i=0;
+        i<60;
+        i++
+    ){
+
+        const p =
+        document.createElement("div");
+
+
+        p.className =
+        "particle";
+
+
+        p.innerHTML =
+
+        [
+            "✦",
+            "♡",
+            "♥",
+            "✨",
+            "✧",
+            "❤️"
+        ]
+        [
+            Math.floor(
+                Math.random()*6
+            )
+        ];
+
+
+        p.style.left =
+        Math.random()*100+"vw";
+
+
+        p.style.bottom =
+        "-20px";
+
+
+        p.style.fontSize =
+
+        (
+            12+
+            Math.random()*22
+        )+"px";
+
+
+        p.style.animationDuration =
+
+        (
+            3+
+            Math.random()*4
+        )+"s";
+
+
+        document.body
+        .appendChild(p);
+
+
+        setTimeout(()=>{
+
+            p.remove();
+
+        },8000);
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
 
