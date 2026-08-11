@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="hi">
 
@@ -13,13 +12,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 
 html,
 body{
@@ -27,93 +24,59 @@ body{
     height:100%;
 }
 
-
 body{
-
-    font-family:
-    'Noto Sans Devanagari',
-    sans-serif;
-
+    font-family:'Noto Sans Devanagari',sans-serif;
     background:#08080d;
-
     color:white;
-
     overflow:hidden;
 }
 
-
-/* =========================================
-   BACKGROUND
-========================================= */
+/* BACKGROUND */
 
 .background{
-
     position:fixed;
-
     inset:0;
-
     background:
-
     radial-gradient(
         circle at 50% 35%,
         rgba(255,120,170,.16),
         transparent 35%
     ),
-
     radial-gradient(
         circle at 10% 90%,
         rgba(110,90,255,.13),
         transparent 35%
     ),
-
     #08080d;
-
     z-index:-5;
 }
 
-
 .light{
-
     position:fixed;
-
     width:420px;
     height:420px;
-
     border-radius:50%;
-
     background:
-
     radial-gradient(
         circle,
         rgba(255,130,180,.10),
         transparent 70%
     );
-
     filter:blur(25px);
-
     animation:moveLight 12s infinite alternate;
-
     z-index:-4;
 }
 
-
 .light.one{
-
     top:-180px;
     left:-120px;
-
 }
-
 
 .light.two{
-
     bottom:-200px;
     right:-120px;
-
     animation-delay:3s;
-
 }
-
 
 @keyframes moveLight{
 
@@ -128,125 +91,80 @@ body{
 }
 
 
-/* =========================================
-   MAIN
-========================================= */
+/* MAIN */
 
 .container{
-
     width:100%;
     height:100vh;
-
     display:flex;
-
     justify-content:center;
     align-items:center;
-
     padding:20px;
-
 }
-
 
 .card{
-
     width:100%;
     max-width:720px;
-
     min-height:500px;
-
     display:flex;
-
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
     position:relative;
-
     padding:40px 25px;
-
 }
 
 
-/* =========================================
-   SCREENS
-========================================= */
+/* SCREENS */
 
 .screen{
-
     width:100%;
-
     display:none;
-
     animation:screenIn 1s ease;
-
 }
-
 
 .screen.active{
-
     display:block;
-
 }
-
 
 @keyframes screenIn{
 
     from{
-
         opacity:0;
-
-        transform:
-        translateY(25px);
-
+        transform:translateY(25px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-        translateY(0);
-
+        transform:translateY(0);
     }
 
 }
 
 
-/* =========================================
-   OPENING
-========================================= */
+/* OPENING */
 
 .opening{
-
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     justify-content:center;
-
 }
-
 
 .logo{
 
     font-family:
-
     'Playfair Display',
     'Noto Sans Devanagari',
     serif;
 
-    font-size:
-    clamp(55px,13vw,110px);
+    font-size:clamp(55px,13vw,110px);
 
     font-weight:600;
 
     letter-spacing:3px;
 
     background:
-
     linear-gradient(
         120deg,
         #ffffff,
@@ -255,71 +173,50 @@ body{
     );
 
     -webkit-background-clip:text;
-
     -webkit-text-fill-color:transparent;
 
     opacity:0;
 
     animation:
-
     logoAppear 2s ease forwards,
-
     logoGlow 3s 2s infinite alternate;
-
 }
-
 
 @keyframes logoAppear{
 
     from{
-
         opacity:0;
-
-        transform:
-        scale(.70);
-
+        transform:scale(.70);
         filter:blur(12px);
-
     }
 
     to{
-
         opacity:1;
-
-        transform:
-        scale(1);
-
+        transform:scale(1);
         filter:blur(0);
-
     }
 
 }
 
-
 @keyframes logoGlow{
 
     from{
-
         filter:
         drop-shadow(
             0 0 5px
             rgba(255,150,190,.2)
         );
-
     }
 
     to{
-
         filter:
         drop-shadow(
             0 0 28px
             rgba(255,150,190,.65)
         );
-
     }
 
 }
-
 
 .subtitle{
 
@@ -335,36 +232,24 @@ body{
 
     animation:
     fadeUp 1s 1.3s forwards;
-
 }
-
 
 @keyframes fadeUp{
 
     from{
-
         opacity:0;
-
-        transform:
-        translateY(15px);
-
+        transform:translateY(15px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-        translateY(0);
-
+        transform:translateY(0);
     }
 
 }
 
 
-/* =========================================
-   BUTTON
-========================================= */
+/* BUTTON */
 
 .btn{
 
@@ -396,9 +281,7 @@ body{
     position:relative;
 
     overflow:hidden;
-
 }
-
 
 .btn::before{
 
@@ -413,7 +296,6 @@ body{
     height:100%;
 
     background:
-
     linear-gradient(
         90deg,
         transparent,
@@ -422,36 +304,26 @@ body{
     );
 
     transition:.6s;
-
 }
-
 
 .btn:hover::before{
-
     left:100%;
-
 }
-
 
 .btn:hover{
 
-    transform:
-    translateY(-3px);
+    transform:translateY(-3px);
 
     border-color:
     rgba(255,180,210,.7);
 
     box-shadow:
-
     0 10px 35px
     rgba(255,100,160,.2);
-
 }
 
 
-/* =========================================
-   TEXT
-========================================= */
+/* TEXT */
 
 .small-title{
 
@@ -462,9 +334,7 @@ body{
     letter-spacing:4px;
 
     margin-bottom:20px;
-
 }
-
 
 .heading{
 
@@ -480,9 +350,7 @@ body{
     line-height:1.3;
 
     margin-bottom:25px;
-
 }
-
 
 .message{
 
@@ -495,29 +363,14 @@ body{
     font-size:18px;
 
     line-height:2;
-
 }
-
 
 .highlight{
-
     color:#ffb2ce;
-
 }
 
 
-.bold{
-
-    font-weight:700;
-
-    color:white;
-
-}
-
-
-/* =========================================
-   TYPEWRITER
-========================================= */
+/* TYPEWRITER */
 
 .typewriter{
 
@@ -530,9 +383,7 @@ body{
     justify-content:center;
 
     line-height:2;
-
 }
-
 
 .cursor{
 
@@ -547,9 +398,7 @@ body{
     margin-left:5px;
 
     animation:blink .8s infinite;
-
 }
-
 
 @keyframes blink{
 
@@ -560,9 +409,7 @@ body{
 }
 
 
-/* =========================================
-   FINAL
-========================================= */
+/* FINAL */
 
 .final-title{
 
@@ -574,7 +421,6 @@ body{
     clamp(42px,9vw,75px);
 
     background:
-
     linear-gradient(
         120deg,
         #ffffff,
@@ -587,9 +433,7 @@ body{
     -webkit-text-fill-color:transparent;
 
     margin-bottom:20px;
-
 }
-
 
 .final-message{
 
@@ -598,13 +442,10 @@ body{
     font-size:18px;
 
     line-height:2;
-
 }
 
 
-/* =========================================
-   PARTICLES
-========================================= */
+/* PARTICLES */
 
 .particle{
 
@@ -618,9 +459,7 @@ body{
 
     animation:
     particleMove 5s linear forwards;
-
 }
-
 
 @keyframes particleMove{
 
@@ -631,13 +470,10 @@ body{
         scale(.5);
 
         opacity:0;
-
     }
 
     15%{
-
         opacity:.8;
-
     }
 
     100%{
@@ -647,15 +483,12 @@ body{
         scale(1.2);
 
         opacity:0;
-
     }
 
 }
 
 
-/* =========================================
-   TRANSITION
-========================================= */
+/* TRANSITION */
 
 .transition{
 
@@ -667,51 +500,33 @@ body{
 
     z-index:100;
 
-    transform:
-    translateY(100%);
+    transform:translateY(100%);
 
     transition:
-
     transform 1s
     cubic-bezier(.77,0,.18,1);
-
 }
-
 
 .transition.active{
-
-    transform:
-    translateY(0);
-
+    transform:translateY(0);
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
     .card{
-
         min-height:450px;
-
     }
-
 
     .message{
-
         font-size:16px;
-
         line-height:1.85;
-
     }
 
-
     .btn{
-
         margin-top:32px;
-
     }
 
 }
@@ -722,6 +537,15 @@ body{
 
 
 <body>
+
+
+<!-- =====================================
+     BACKGROUND MUSIC
+===================================== -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="sakhi song.mp3" type="audio/mpeg">
+</audio>
 
 
 <div class="background"></div>
@@ -749,20 +573,13 @@ id="transition">
 class="screen active opening"
 id="screen1">
 
-
     <div class="logo">
-
         श्रीsakhi
-
     </div>
-
 
     <div class="subtitle">
-
         SOMEONE PRICELESS
-
     </div>
-
 
     <button
     class="btn"
@@ -772,9 +589,7 @@ id="screen1">
 
     </button>
 
-
 </div>
-
 
 
 <!-- =====================================
@@ -785,13 +600,9 @@ id="screen1">
 class="screen"
 id="screen2">
 
-
     <div class="small-title">
-
         SUNO SAKHI...
-
     </div>
-
 
     <div class="heading">
 
@@ -799,7 +610,6 @@ id="screen2">
         श्रीsakhi ❤️
 
     </div>
-
 
     <div class="message">
 
@@ -813,7 +623,6 @@ id="screen2">
 
     </div>
 
-
     <button
     class="btn"
     onclick="next()">
@@ -822,9 +631,7 @@ id="screen2">
 
     </button>
 
-
 </div>
-
 
 
 <!-- =====================================
@@ -835,21 +642,16 @@ id="screen2">
 class="screen"
 id="screen3">
 
-
     <div class="small-title">
-
         EK BAAT
-
     </div>
-
 
     <div class="heading">
 
-        tumhara sakha<br>
+        Banku Bhaiya<br>
         kuch kehna chahta hai...
 
     </div>
-
 
     <div class="message">
 
@@ -857,13 +659,12 @@ id="screen3">
 
         <br><br>
 
-        Main sabke samne khulkar 
-        nhi rehta bas tum hi ek ho
-        jo real gopal ko janti ho,
+        Main duniya ke saamne shayad
+        har baat nahi keh pata,
 
         <br><br>
 
-        me tumse...
+        lekin tumse...
 
         <br><br>
 
@@ -881,7 +682,6 @@ id="screen3">
 
     </div>
 
-
     <button
     class="btn"
     onclick="next()">
@@ -890,9 +690,7 @@ id="screen3">
 
     </button>
 
-
 </div>
-
 
 
 <!-- =====================================
@@ -903,13 +701,11 @@ id="screen3">
 class="screen"
 id="screen4">
 
-
     <div class="small-title">
 
         MERI BANDARIYA 🐒
 
     </div>
-
 
     <div class="heading">
 
@@ -917,25 +713,25 @@ id="screen4">
 
     </div>
 
-
     <div class="message">
 
-        tumhari pagalpanti,
+        Kabhi Pglu,
 
         <br>
 
-        tumahari naughty harkate,
+        kabhi Bandariya,
 
         <br>
 
-        itti pyari lgti hai
-        ki mann krta sunta hi rhu. 😂
+        kabhi itni annoying
+        ki mann kare tujhe
+        block kar doon. 😂
 
         <br><br>
 
         <span class="highlight">
 
-        pta sach ye hai...
+        Lekin sach ye hai...
 
         </span>
 
@@ -946,10 +742,9 @@ id="screen4">
         <br>
 
         to shayad ye sab
-        ye me khud ko hi bhul jau.
+        itna interesting bhi na ho.
 
     </div>
-
 
     <button
     class="btn"
@@ -959,9 +754,7 @@ id="screen4">
 
     </button>
 
-
 </div>
-
 
 
 <!-- =====================================
@@ -972,20 +765,15 @@ id="screen4">
 class="screen"
 id="screen5">
 
-
     <div class="small-title">
-
         ACTUALLY...
-
     </div>
-
 
     <div class="heading">
 
         Tu sirf friend nahi hai.
 
     </div>
-
 
     <div class="message">
 
@@ -1002,19 +790,18 @@ id="screen5">
 
         <br><br>
 
-        Aur mere liye bas tumse...
+        Aur kabhi-kabhi...
 
         <br><br>
 
         <span class="highlight">
 
         bas baat kar lena hi
-        sukoon hai.
+        sukoon de deta hai.
 
         </span>
 
     </div>
-
 
     <button
     class="btn"
@@ -1024,9 +811,7 @@ id="screen5">
 
     </button>
 
-
 </div>
-
 
 
 <!-- =====================================
@@ -1037,20 +822,17 @@ id="screen5">
 class="screen"
 id="screen6">
 
-
     <div class="small-title">
 
         MERI श्रीsakhi ❤️
 
     </div>
 
-
     <div class="heading">
 
         Ek cheez yaad rakhna...
 
     </div>
-
 
     <div class="message">
 
@@ -1070,16 +852,15 @@ id="screen6">
 
         <span class="highlight">
 
-        koi nhi le skta.
+        priceless hai.
 
         </span>
 
         <br><br>
 
-        tumhahra  koi comparison nahi hai.
+        Iski koi comparison nahi hai.
 
     </div>
-
 
     <button
     class="btn"
@@ -1089,9 +870,7 @@ id="screen6">
 
     </button>
 
-
 </div>
-
 
 
 <!-- =====================================
@@ -1102,20 +881,17 @@ id="screen6">
 class="screen"
 id="screen7">
 
-
     <div class="small-title">
 
         GOPIBEN KI SAKHI ❤️
 
     </div>
 
-
     <div class="heading">
 
         Meri priye श्रीsakhi...
 
     </div>
-
 
     <div class="message">
 
@@ -1134,7 +910,7 @@ id="screen7">
 
         <span class="highlight">
 
-        me humesa tumahare sath hu.
+        Tum bahut important ho.
 
         </span>
 
@@ -1153,7 +929,6 @@ id="screen7">
 
     </div>
 
-
     <button
     class="btn"
     onclick="finalScreen()">
@@ -1162,9 +937,7 @@ id="screen7">
 
     </button>
 
-
 </div>
-
 
 
 <!-- =====================================
@@ -1175,13 +948,11 @@ id="screen7">
 class="screen"
 id="screen8">
 
-
     <div class="small-title">
 
         FOR MY श्रीsakhi
 
     </div>
-
 
     <div class="final-title">
 
@@ -1189,71 +960,48 @@ id="screen8">
 
     </div>
 
-
     <div class="final-message">
 
         <p>
-
             Meri life mein hone ke liye.
-
         </p>
-
 
         <br>
 
-
         <p>
-
             Meri random baatein
             sunne ke liye.
-
         </p>
-
 
         <br>
 
-
         <p>
-
             Mujhe bina judge kiye
             samajhne ke liye.
-
         </p>
-
 
         <br>
 
-
         <p>
-
             Mere saath har tarah ki
             bakwaas share karne ke liye.
-
         </p>
 
-
         <br>
-
 
         <p>
-
             Aur sabse important...
-
         </p>
 
-
         <br>
-
 
         <p class="highlight">
 
-            Meri श्रीSakhi hone ke liye. ❤️
+            Meri Sakhi hone ke liye. ❤️
 
         </p>
 
-
         <br><br>
-
 
         <p>
 
@@ -1265,14 +1013,12 @@ id="screen8">
 
             <br>
 
-            jiske bina tumhara gopiben
-            ek question mark hai.
+            jiske bina kuch cheezein
+            adhuri si lagti hain.
 
         </p>
 
-
         <br>
-
 
         <p class="highlight">
 
@@ -1280,18 +1026,13 @@ id="screen8">
 
         </p>
 
-
         <br>
 
-
         <p>
-
             — Gopiben ❤️
-
         </p>
 
     </div>
-
 
     <button
     class="btn"
@@ -1301,14 +1042,12 @@ id="screen8">
 
     </button>
 
-
 </div>
 
 
 </div>
 
 </div>
-
 
 
 <script>
@@ -1321,12 +1060,31 @@ id="screen8">
 let current = 1;
 
 
-
 /* =========================================
-   START WEBSITE
+   START + MUSIC
 ========================================= */
 
 function start(){
+
+    const music =
+    document.getElementById("bgMusic");
+
+    /*
+       Song starts when the user
+       clicks NEXT.
+    */
+
+    music.volume = 0.5;
+
+    music.play().catch(function(error){
+
+        console.log(
+            "Music could not start:",
+            error
+        );
+
+    });
+
 
     transition();
 
@@ -1349,7 +1107,6 @@ function start(){
     },700);
 
 }
-
 
 
 /* =========================================
@@ -1377,7 +1134,6 @@ function next(){
 }
 
 
-
 /* =========================================
    SHOW SCREEN
 ========================================= */
@@ -1388,17 +1144,22 @@ function showScreen(number){
     .querySelectorAll(".screen")
     .forEach(screen=>{
 
-        screen.classList.remove("active");
+        screen.classList.remove(
+            "active"
+        );
 
     });
 
 
     document
-    .getElementById("screen"+number)
-    .classList.add("active");
+    .getElementById(
+        "screen"+number
+    )
+    .classList.add(
+        "active"
+    );
 
 }
-
 
 
 /* =========================================
@@ -1408,20 +1169,25 @@ function showScreen(number){
 function transition(){
 
     const t =
-    document.getElementById("transition");
+    document.getElementById(
+        "transition"
+    );
 
 
-    t.classList.add("active");
+    t.classList.add(
+        "active"
+    );
 
 
     setTimeout(()=>{
 
-        t.classList.remove("active");
+        t.classList.remove(
+            "active"
+        );
 
     },900);
 
 }
-
 
 
 /* =========================================
@@ -1431,13 +1197,15 @@ function transition(){
 function typeText(text){
 
     const element =
-    document.getElementById("text1");
+    document.getElementById(
+        "text1"
+    );
 
 
-    element.innerHTML="";
+    element.innerHTML = "";
 
 
-    let i=0;
+    let i = 0;
 
 
     function write(){
@@ -1466,7 +1234,6 @@ function typeText(text){
 }
 
 
-
 /* =========================================
    FLOATING PARTICLES
 ========================================= */
@@ -1480,7 +1247,9 @@ function createParticles(){
     ){
 
         const p =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
 
         p.className =
@@ -1515,9 +1284,9 @@ function createParticles(){
         p.style.animationDuration =
 
         (
-            4+
+            4 +
             Math.random()*4
-        )+"s";
+        ) + "s";
 
 
         document.body
@@ -1535,7 +1304,6 @@ function createParticles(){
 }
 
 
-
 /* =========================================
    FINAL SCREEN
 ========================================= */
@@ -1549,17 +1317,13 @@ function finalScreen(){
 
         showScreen(8);
 
-
-        current=8;
-
+        current = 8;
 
         createParticles();
-
 
     },700);
 
 }
-
 
 
 /* =========================================
@@ -1575,7 +1339,9 @@ function celebrate(){
     ){
 
         const p =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
 
         p.className =
@@ -1610,17 +1376,17 @@ function celebrate(){
         p.style.fontSize =
 
         (
-            12+
+            12 +
             Math.random()*22
-        )+"px";
+        ) + "px";
 
 
         p.style.animationDuration =
 
         (
-            3+
+            3 +
             Math.random()*4
-        )+"s";
+        ) + "s";
 
 
         document.body
@@ -1643,5 +1409,3 @@ function celebrate(){
 </body>
 
 </html>
-```
-
